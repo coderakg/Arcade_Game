@@ -26,11 +26,10 @@ screen.onkeypress(r_paddle.go_down,"Down")
 
 game_on = True
 while game_on:
-    time.sleep(ball.move_speed) # to slow down the animation and we can actually see what is happening
+    time.sleep(ball.move_speed) 
     screen.update() 
-    ball.move() # a method in the ball class that will make the ball move 
+    ball.move()  
     
-    #detect collisions
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
         
