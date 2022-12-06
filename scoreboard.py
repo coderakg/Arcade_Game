@@ -9,7 +9,7 @@ class Scoreboard(Turtle):
         self.penup()
         self.hideturtle()
         self.l_score = 0
-        with open("left_hs.txt") as left_hs: # left hs
+        with open("left_hs.txt") as left_hs: 
             self.left_highscore = int(left_hs.read())
             print(self.left_highscore)
         self.r_score = 0
@@ -36,19 +36,6 @@ class Scoreboard(Turtle):
             with open("right_hs.txt",mode="w") as right_file:
                 right_file.write(f"{self.right_highscore}")
         self.write(f"Right Highscore : {self.right_highscore} " , align="center",font=("Courier",20,"normal"))
-        # self.highscores
-        
-    # def left_update(self):
-        
-    
-    # def highscores(self):
-       
-        
-        # if self.r_score > self.right_highscore:
-        #     self.r_score = self.right_highscore
-        #     with open("left_hs.txt",mode="w") as right_file:
-        #         right_file.write(f"{self.right_highscore}")
-        
         
     def l_point(self):
         self.l_score += 1
